@@ -36,7 +36,7 @@ export default async function scanModuleCode(code, path) {
     parserOpts: {
       plugins: [
         'classProperties',
-        ['decorators', { decoratorsBeforeExport: false }],
+        ['@babel/plugin-proposal-class-properties', { legacy: true }],
       ],
     },
   });
